@@ -1,0 +1,63 @@
+{
+  "realm": "task_master",
+  "enabled": true,
+  "roles": {
+    "realm": [
+      {
+        "name": "admin",
+        "description": "Admin role in the realm"
+      },
+      {
+        "name": "user",
+        "description": "Regular user role in the realm"
+      }
+    ]
+  },
+  "defaultRoles": [
+    "user"
+  ],
+  "users": [
+    {
+      "username": "rashmika",
+      "email": "admin@admin.com",
+      "firstName": "Rashmika",
+      "lastName": "Jayasooriya",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "rashmika",
+          "temporary": false
+        }
+      ],
+      "clientRoles": {
+        "realm-management": [
+          "realm-admin"
+        ]
+      }
+    }
+  ],
+  "clients": [
+    {
+      "clientId": "task_master_app",
+      "name": "task_master_app",
+      "secret": "ITzFJ7jwp9jR9zomEDce0TgJXmce7vMI",
+      "rootUrl": "http://localhost:8080/",
+      "redirectUris": [
+        "/*"
+      ],
+      "webOrigins": [
+        "/*"
+      ],
+      "publicClient": false,
+      "protocol": "openid-connect",
+      "serviceAccountsEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "standardFlowEnabled": true,
+      "bearerOnly": false,
+      "frontchannelLogout": true,
+      "enabled": true
+    }
+  ]
+}
